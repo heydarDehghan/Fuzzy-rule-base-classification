@@ -2,17 +2,6 @@ from servises import *
 from fuzzyRuleBaseClassification import FuzzyRuleBaseClassification as Fz
 
 
-def add_interval(ax, xdata, ydata, caps="  "):
-    line = ax.add_line(mpl.lines.Line2D(xdata, ydata))
-    anno_args = {
-        'ha': 'center',
-        'va': 'center',
-        'size': 24,
-        'color': line.get_color()
-    }
-    a0 = ax.annotate(caps[0], xy=(xdata[0], ydata[0]), **anno_args)
-    a1 = ax.annotate(caps[1], xy=(xdata[1], ydata[1]), **anno_args)
-    return (line,(a0,a1))
 
 if __name__ == "__main__":
     ''' '''
